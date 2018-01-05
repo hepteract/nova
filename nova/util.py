@@ -3,6 +3,8 @@
 """Basic utilities for nova"""
 
 class _superpass(object):
+    """Simple object to be a placeholder"""
+
     def __getattr__(self, name):
         return self
     

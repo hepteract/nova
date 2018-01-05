@@ -5,6 +5,7 @@
 import subprocess
 
 class System(object):
+    """Allows calling of system processes as if they were local functions"""
     def __init__(self, method):
         self.method = method
 
