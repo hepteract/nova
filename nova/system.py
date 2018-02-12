@@ -18,7 +18,7 @@ class System(object):
 
             if hasattr(ret, "communicate"):
                 output, err = ret.communicate()
-                return output
+                return output.decode("utf-8")
             
             return ret
         return system_wrapper
