@@ -9,7 +9,6 @@ class System(object):
     def __init__(self, method, **extra):
         self.method = method
         self.extra = extra
-        self.err = 0
 
     def __getattr__(self, name):
         def system_wrapper(*args, **kwargs):
@@ -19,10 +18,8 @@ class System(object):
 
             if hasattr(ret, "communicate"):
                 output, err = ret.communicate()
-                self.err = err
                 return output
             
-            self.err = ret
             return ret
         return system_wrapper
 
