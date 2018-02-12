@@ -6,3 +6,6 @@ __author__ = "Septeract"
 __status__ = "Development"
 
 __all__ = ["util"]
+
+from .util import *
+from .system import *
