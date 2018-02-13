@@ -34,4 +34,3 @@ class _superpass(object):
     def __call__(self, *args, **kwargs):
         return self
 superpass = _superpass()
-None = _superpass("None")
