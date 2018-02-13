@@ -4,6 +4,8 @@
 
 class _superpass(object):
     """Simple object to be a placeholder"""
+    def __init__(self, name = "superpass"):
+        self.repr = name
 
     def __getattr__(self, name):
         return self
@@ -24,7 +26,7 @@ class _superpass(object):
         return
 
     def __repr__(self):
-        return "superpass"
+        return self.repr
 
     def __eq__(self, other):
         return True
@@ -32,3 +34,4 @@ class _superpass(object):
     def __call__(self, *args, **kwargs):
         return self
 superpass = _superpass()
+None = _superpass("None")
